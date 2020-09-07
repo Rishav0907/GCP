@@ -154,7 +154,7 @@ d) Cloud Data Store
 
 e) Google Big data
 
-##Google Cloud Storage:
+## Google Cloud Storage:
 
 a) Object storage means we storage means we store some data and the storage addresses it with unique key.
 
@@ -191,7 +191,7 @@ l) For finer control we use ACL(Access Control List). ACL contains who can perfo
 
 m) It has a kind of version control also.
 
-##Cloud Storage Interaction:
+## Cloud Storage Interaction:
 
 Cloud Storage classes provided by GCP:
 
@@ -229,7 +229,7 @@ x) gsutil is the cloud storage command
 
 xi) We can import data from big tables,compute engine,cloud sql and datastore backups
 
-##Google Cloud Big Table:
+## Google Cloud Big Table:
 
 a) Cloud Bigtable is google's NOSQL big data database service.
 
@@ -259,7 +259,7 @@ vii) Cloud spanner offers transactional consistency in a global scale,schemas,sq
 
 viii)database service can scale to higher database sizes
 
-##Google Cloud Datastore
+## Google Cloud Datastore
 
 a) Cloud Datastore is another highly scalable NoSQL database service.
 
@@ -268,3 +268,94 @@ b) Used to store structure data from App engine apps.
 c) It handles sharding and replication.
 
 c) Offers transaction that affects multiple database rows and can perform SQL like queries.
+
+## Container,Kubernetes and Kubernetes engine
+
+a) Compute Engine is Iaas service of GCP and App engine is Paas service of GCP.
+
+b) Kubernetes engine is like both Iaas and Paas.
+
+c) Iaas let us share infrastructure by virtualizing a hardware. Each vm has a instance of OS of our choice and we can run application on it.
+
+d) VM are highly configurable , so we can configure as our choice and install web servers.
+
+e) Auto Scaling is done
+
+f) Kubernetes makes it easy to arrange many containers on hosts, updating new versions.
+
+## Intro to Kubernetes and GKE
+
+a) Kubernetes provides an API  called kubectl whch allows authorized users to control its utilities.
+
+b) Kubernetes allows to deploy containers on a set of node called clusters.
+
+c) A cluster is a set of master components that control the system as a whole and a set of nodes that run containers.
+
+d) A cluster can be created with the command " gcloud container cluster create k1 "
+
+e) Kubernetes deploy a container inside a pod.
+
+f) Any containers in the same pod will share the same resources and local network. Containers can easily communicate with other containers in the same pod as though they were on the same machine
+
+g)Although pods are the basic unit of computation in Kubernetes, they are not typically directly launched on a cluster. Instead, pods are usually managed by one more layer of abstraction: the deployment.
+
+## Intro to App Engine
+
+a) Kubernetes and Compute Engine provides Infrastructure as a service.
+
+b) App engine uses Platform as a service.
+
+c)The app engine manages the hardware and network configurations required to run tour code.
+
+d) App engine provide us services like nosql db,load balancing,health checks,auth.
+
+e) Auto scaling is provides.
+
+## App Engine Standard Environment
+
+a) Two environments of app engine - Standard and Flexible.
+
+b) Standard is simpler,offers simple deployment exp.
+
+C) Standard one provides free daily usage quota.
+
+d) In standard ,low utilization application might be able to run at no charge.
+
+e) App engine standard environment provides runtime for java,python,php,go etc.
+
+f) Standard environment sandboxes our application
+
+## App Engine Flexible Environment
+
+a) In Flexible environment , app engines allows us to specify the container in which app engine runs.
+
+c)  Our application runs inside docker containers inside google compute engine vm.
+
+d) We can choose the geographical region.
+
+## App Engine Standard Environment VS Flexible Environment
+
+                                Standard Environment            Flexible Environment
+                                
+  Instance Startup               Milliseconds                     Minutes
+  
+  SSH                            No                               Yes
+  
+  Write to local disk            No                               Yes
+  
+  Support for 3rd party          No                               Yes
+  binaries                              
+  
+  Network Access                 Vis app engine service           Yes
+
+
+## Kubernetes VS App Engine
+
+                            Kubernetes                App engine flexible           App engine standard
+                            
+   Language Support          Any                        Any                           Java,Python,php,Go
+   
+   Service Models            Hybrid                     Paas                          Paas
+   
+   Primary Use case          Container based            Web and mobile app            Web and mobile app based.                workloads                  based,container workloads
+                                              
